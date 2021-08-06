@@ -18,6 +18,9 @@ git clone "${REPOSITORY_URI}"
 
 cd "$(ls)" || exit
 
+git checkout main
+git pull
+
 # Fetching the commit message for the latest commit to branch this action is applied to
 COMMIT_MSG=$(git log -1 --pretty=%B|sed 's/\r$//g'|sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/\\\\n/g')
 
