@@ -47,6 +47,7 @@ git push
 
 # Pull from branch again to update latest tag
 git pull
+git fetch --tags
 
 # Get the value of latest tag that was just pushed
 NEW_TAG="$(git describe --tags)"
