@@ -12,8 +12,8 @@ jobs:
       - name: Bump version
         uses: Mropat/bump2version-action@main
         env:
-          GITHUB_TOKEN: ${{ secrets.BUMPVERSION_TOKEN }}
+          BUMPVERSION_TOKEN: ${{ secrets.BUMPVERSION_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_ACTOR: ${{ secrets.AUTHOR }}
-          GITHUB_ACTOR_EMAIL: ${{ secrets.AUTHOR_EMAIL }}
-          GITHUB_ACTOR_NAME: ${{ secrets.AUTHOR_NAME }}
+          AUTHOR: ${{ secrets.AUTHOR }}
+          AUTHOR_EMAIL: ${{ secrets.AUTHOR_EMAIL }}
+          AUTHOR_NAME: ${{ secrets.AUTHOR_NAME }}
