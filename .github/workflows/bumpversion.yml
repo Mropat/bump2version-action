@@ -10,7 +10,7 @@ jobs:
     name: Bump version and push tags to master
     steps:
       - name: Bump version
-        uses: Mropat/bump2version-action@master
+        uses: Mropat/bump2version-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.BUMPVERSION_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
