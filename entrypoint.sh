@@ -42,8 +42,8 @@ bump2version --config-file .bumpversion.cfg "${VERSION}"
 BUMP_COMMIT_MSG=$(git log -1 --pretty=%B)
 git commit --amend -m "${BUMP_COMMIT_MSG} [skip ci]"
 
-git push
 git push --tags
+git push
 
 # Pull from branch again to update latest tag
 git pull
