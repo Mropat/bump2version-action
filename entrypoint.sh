@@ -48,7 +48,7 @@ git push "${REPOSITORY_URI}" --tags
 git pull
 
 # Get the value of latest tag that was just pushed
-NEW_TAG="$(git describe)"
+NEW_TAG="$(git describe --tags)"
 
 # Construct post JSON for publishing release
 POST_DATA=$(echo -e {\"tag_name\": \"$NEW_TAG\", \"name\": \"Release $NEW_TAG\", \"draft\": false, \"prerelease\": false, \"body\": \""${COMMIT_MSG}"\"})
