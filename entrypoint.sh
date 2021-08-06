@@ -40,18 +40,14 @@ git config --global user.email "${AUTHOR_EMAIL}"
 # Run bump2version
 bump2version --config-file .bumpversion.cfg "${VERSION}"
 
-BUMP_COMMIT_MSG=$(git log -1 --pretty=%B)
-git commit -m "${BUMP_COMMIT_MSG} [skip ci]"
-
-git push --tags
 git push
+git push --tags
 
 # Pull from branch again to update latest tag
 git pull
-git fetch --tags
 
 # Get the value of latest tag that was just pushed
-NEW_TAG="$(git describe --tags)"
+NEW_TAG="$(git describe)"
 
 # Construct post JSON for publishing release
 POST_DATA=$(echo -e {\"tag_name\": \"$NEW_TAG\", \"name\": \"Release $NEW_TAG\", \"draft\": false, \"prerelease\": false, \"body\": \""${COMMIT_MSG}"\"})
