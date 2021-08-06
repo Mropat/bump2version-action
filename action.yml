@@ -1,0 +1,6 @@
+name: "Bump2version action"
+description: "Bumps version"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
