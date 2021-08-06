@@ -6,7 +6,6 @@
 # AUTHOR: github-actions workflow native user (github-actions[bot])
 # GITHUB_REPOSITORY: repository this action runs on
 # AUTHOR_EMAIL
-# AUTHOR_NAME
 
 # INPUT_RELEASE_PAT: Personal Access Token of the github user who will author the release
 
@@ -33,7 +32,6 @@ fi
 
 # Configure email of the github user to the one of the github-actions bot
 git config --global user.email "${AUTHOR_EMAIL}"
-git config --global user.name "${AUTHOR_NAME}"
 
 # Run bump2version
 bump2version --config-file .bumpversion.cfg "${VERSION}"

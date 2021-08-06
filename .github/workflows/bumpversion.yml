@@ -16,4 +16,3 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           AUTHOR: ${{ secrets.AUTHOR }}
           AUTHOR_EMAIL: ${{ secrets.AUTHOR_EMAIL }}
-          AUTHOR_NAME: ${{ secrets.AUTHOR_NAME }}
