@@ -20,7 +20,7 @@ cd "$(ls)" || exit
 
 git checkout main
 git pull origin main
-git fetch 
+git fetch
 
 # Fetching the commit message for the latest commit to branch this action is applied to
 COMMIT_MSG=$(git log -1 --pretty=%B|sed 's/\r$//g'|sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/\\\\n/g')
@@ -41,7 +41,7 @@ git config --global user.email "${AUTHOR_EMAIL}"
 bump2version --config-file .bumpversion.cfg "${VERSION}"
 
 BUMP_COMMIT_MSG=$(git log -1 --pretty=%B)
-git commit --amend -m "${BUMP_COMMIT_MSG} [skip ci]"
+git commit --amend --no-edit -m "${BUMP_COMMIT_MSG} [skip ci]"
 
 git push --tags
 git push
