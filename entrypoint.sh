@@ -18,7 +18,7 @@ git clone "${REPOSITORY_URI}"
 
 cd "$(ls)" || exit
 
-git checkout main
+git checkout origin/main
 git pull
 
 # Fetching the commit message for the latest commit to branch this action is applied to
