@@ -41,7 +41,7 @@ git config --global user.email "${AUTHOR_EMAIL}"
 bump2version --config-file .bumpversion.cfg "${VERSION}"
 
 BUMP_COMMIT_MSG=$(git log -1 --pretty=%B)
-git commit --amend --no-edit -m "${BUMP_COMMIT_MSG} [skip ci]"
+git commit -m "${BUMP_COMMIT_MSG} [skip ci]"
 
 git push --tags
 git push
