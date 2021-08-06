@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="bump2version-ci",
-    version="0.0.5",
+    version="0.0.6",
     description="Bump package version automatically",
     long_description="This file exists as proof of concept that bump2version-ci works on itself",
     long_description_content_type="text/markdown",
